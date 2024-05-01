@@ -13,8 +13,6 @@ for image in image_list:
     else:
         to_encrypt.append(image)
 
-
-print(image_list)
 print(to_encrypt)
 key = fernet.Fernet.generate_key()
 
