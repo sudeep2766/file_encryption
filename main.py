@@ -31,8 +31,13 @@ if os.path.exists('thekey.key'):
 
                 with open(file, 'wb') as just_encrypting:
                     just_encrypting.write(encrypted)
-    print("Encryption successful!")
-    print(to_encrypt)
+            print("Encryption successful!")
+            print(to_encrypt)
+
+        else:
+            print("Encryption aborted.")
+    else:
+        print("Encryption aborted.")
 
 else:
     with open ('thekey.key', 'wb') as thekey1:
@@ -46,6 +51,5 @@ else:
 
         with open(file, 'wb') as just_encrypting:
             just_encrypting.write(encrypted)
-    print("Encryption successful!")
-    print(to_encrypt)
-
+            print("Encryption successful!")
+            print(to_encrypt)
